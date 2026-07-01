@@ -33,8 +33,7 @@
         }
     },
     "scripts": {
-        "setup": [
-            "composer install",
+        "post-install-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
             "@php artisan migrate --force",
@@ -67,21 +66,5 @@
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "php-http/discovery": true
-        }
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
-}
+    }
+}    
