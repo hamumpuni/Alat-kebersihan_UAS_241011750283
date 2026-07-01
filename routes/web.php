@@ -46,8 +46,5 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('alat', AlatKebersihanController::class)->except(['show']); 
 
 
-Route::get('/jalankan-migrasi', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return 'Database berhasil di-migrate!';
-});
+
 });
