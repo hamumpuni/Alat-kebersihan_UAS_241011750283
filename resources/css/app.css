@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Letakkan variabel warna kamu di dalam direktif @theme agar Tailwind mengenalinya */
+@theme {
+  --color-primary: #0F766E;
+  --color-primary-dark: #0A5450;
+  --color-primary-light: #14B8A6;
+  --color-mint: #5EEAD4;
+  --color-mint-soft: #E6FBF6;
+  --color-bg-soft: #F4FBF9;
+  --color-ink: #0B2B28;
+  --color-ink-soft: #547571;
+}
+
+/* Biarkan CSS dasar lainnya di bawah sini */
+body {
+  .stat-card{
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.stat-card h3{
+    font-size:28px;
+    font-weight:700;
+    margin:0;
+}
+
+.stat-card span{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.stat-icon{
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+
+.data-card{
+    background:#fff;
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.btn-primary-simak{
+    background:#0f766e;
+    color:#fff;
+    border-radius:10px;
+    padding:8px 18px;
+    text-decoration:none;
+}
+
+.btn-primary-simak:hover{
+    background:#115e59;
+    color:#fff;
+}
+
+.btn-edit{
+    background:#0ea5e9;
+    color:#fff;
+}
+
+.btn-delete{
+    background:#dc2626;
+    color:#fff;
+}
+
+.btn-edit,
+.btn-delete{
+    border:none;
+    border-radius:8px;
+    padding:6px 12px;
+}
+  @apply text-ink bg-bg-soft; 
+  
+}
