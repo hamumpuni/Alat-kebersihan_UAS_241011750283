@@ -4,6 +4,7 @@ use App\Http\Controllers\AlatKebersihanController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,4 +44,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
  
     Route::get('/alat/export/pdf', [AlatKebersihanController::class, 'exportPdf'])->name('alat.export');
     Route::resource('alat', AlatKebersihanController::class)->except(['show']); 
+
+
+Route::get('/jalankan-migrasi', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Database berhasil di-migrate!';
+});
 });
